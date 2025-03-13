@@ -1,3 +1,0 @@
-# Conditions d'Utilisation
-
-En utilisant Deep Study AI, vous acceptez les conditions suivantes... 
