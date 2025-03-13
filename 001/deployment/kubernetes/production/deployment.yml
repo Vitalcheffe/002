@@ -1,0 +1,43 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: deepstudy-ai
+  namespace: production
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: deepstudy-ai
+  template:
+    metadata:
+      labels:
+        app: deepstudy-ai
+    spec:
+      containers:
+      - name: deepstudy-ai
+        image: gcr.io/deepstudy-ai/production:latest
+        resources:
+          requests:
+            memory: "512Mi"
+            cpu: "250m"
+          limits:
+            memory: "1Gi"
+            cpu: "500m"
+        env:
+          - name: ENVIRONMENT
+            value: "production"
+        envFrom:
+          - secretRef:
+              name: deepstudy-secrets
+        readinessProbe:
+          httpGet:
+            path: /health
+            port: 8000
+          initialDelaySeconds: 5
+          periodSeconds: 10
+        livenessProbe:
+          httpGet:
+            path: /health
+            port: 8000
+          initialDelaySeconds: 15
+          periodSeconds: 20 

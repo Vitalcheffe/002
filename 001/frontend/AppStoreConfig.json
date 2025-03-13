@@ -1,0 +1,25 @@
+{
+  "expo": {
+    "name": "Deep Study AI",
+    "slug": "deep-study-ai",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "ios": {
+      "bundleIdentifier": "com.deepstudy.ai",
+      "buildNumber": "1.0.0"
+    },
+    "android": {
+      "package": "com.deepstudy.ai",
+      "versionCode": 1
+    }
+  }
+} 
