@@ -1,0 +1,215 @@
+:root {
+    --primary-color: #4A90E2;
+    --background-color: #F8F9FA;
+    --card-background: #FFFFFF;
+    --text-color: #303030;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: var(--background-color);
+}
+
+.status-bar {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.get-plus {
+    background-color: #F0F0FF;
+    color: var(--primary-color);
+    border: none;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: 500;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+.logo {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 40px;
+}
+
+.pages-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    padding: 20px;
+    width: 100%;
+    max-width: 600px;
+}
+
+.page-card {
+    background: var(--card-background);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.2s;
+}
+
+.page-card:hover {
+    transform: translateY(-2px);
+}
+
+.page-card h2 {
+    font-size: 16px;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.page-card p {
+    font-size: 14px;
+    color: #666;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 20px;
+    background: white;
+}
+
+.nav-bar {
+    display: flex;
+    justify-content: space-around;
+    padding: 16px;
+    background: white;
+    border-top: 1px solid #eee;
+}
+
+.nav-btn {
+    background: none;
+    border: none;
+    font-size: 24px;
+    padding: 8px 16px;
+    cursor: pointer;
+}
+
+.nav-btn.active {
+    color: var(--primary-color);
+}
+
+.input-container {
+    display: flex;
+    align-items: center;
+    background: var(--background-color);
+    border-radius: 24px;
+    padding: 8px 16px;
+    margin-top: 12px;
+}
+
+.input-container input {
+    flex: 1;
+    border: none;
+    background: none;
+    padding: 8px;
+    font-size: 16px;
+}
+
+.input-actions {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 12px;
+}
+
+.action-btn {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.message-container {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    margin: 20px;
+    overflow: hidden;
+}
+
+.message {
+    padding: 20px;
+}
+
+.action-menu {
+    border-top: 1px solid #eee;
+}
+
+.action-button {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    border: none;
+    background: none;
+    border-bottom: 1px solid #f0f0f0;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: left;
+}
+
+.action-button:hover {
+    background-color: #f8f9fa;
+}
+
+.action-button .icon {
+    color: #666;
+    font-size: 20px;
+}
+
+.model-button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.model-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.model-name {
+    font-size: 14px;
+    color: #666;
+}
+
+/* Animation pour les boutons */
+.action-button {
+    transition: background-color 0.2s;
+}
+
+/* Style spécial pour le dernier bouton (Mode) */
+.action-button:last-child {
+    border-bottom: none;
+}
+
+/* Style pour le conteneur actif */
+.message-container.active {
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+} 

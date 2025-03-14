@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App de Cours</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="status-bar">
+        <span class="time">9:41</span>
+        <div class="status-icons">
+            <span class="signal"></span>
+            <span class="wifi"></span>
+            <span class="battery"></span>
+        </div>
+    </div>
+
+    <header>
+        <button class="menu-btn">☰</button>
+        <button class="premium-btn">Premium ✦</button>
+        <button class="new-post-btn">✎</button>
+    </header>
+
+    <main>
+        <div class="logo">
+            <img src="logo.svg" alt="Logo">
+        </div>
+
+        <div class="pages-grid">
+            <!-- Chaque carte est un lien vers une page différente -->
+            <a href="/cours-math" class="page-card">
+                <h2>Cours de Mathématiques</h2>
+                <p>Algèbre, géométrie, calcul</p>
+            </a>
+
+            <a href="/cours-physique" class="page-card">
+                <h2>Cours de Physique</h2>
+                <p>Mécanique, électricité, ondes</p>
+            </a>
+
+            <a href="/exercices" class="page-card">
+                <h2>Exercices Pratiques</h2>
+                <p>Entraînement et révisions</p>
+            </a>
+
+            <a href="/ressources" class="page-card">
+                <h2>Ressources</h2>
+                <p>Documents et supports</p>
+            </a>
+        </div>
+    </main>
+
+    <footer>
+        <div class="nav-bar">
+            <button class="nav-btn active">🏠</button>
+            <button class="nav-btn">📚</button>
+            <button class="nav-btn">🔍</button>
+            <button class="nav-btn">👤</button>
+        </div>
+    </footer>
+
+    <div class="message-container">
+        <div class="message">
+            <!-- Contenu du message/cours -->
+        </div>
+
+        <div class="action-menu">
+            <button class="action-button">
+                <span>Copier</span>
+                <span class="icon">📋</span>
+            </button>
+            
+            <button class="action-button">
+                <span>Sélectionner</span>
+                <span class="icon">📑</span>
+            </button>
+            
+            <button class="action-button">
+                <span>Régénérer</span>
+                <span class="icon">🔄</span>
+            </button>
+            
+            <button class="action-button">
+                <span>Signaler</span>
+                <span class="icon">⚠️</span>
+            </button>
+            
+            <button class="action-button">
+                <span>Lire</span>
+                <span class="icon">🔊</span>
+            </button>
+
+            <button class="action-button model-button">
+                <div class="model-info">
+                    <span>Mode</span>
+                    <span class="model-name">Standard</span>
+                </div>
+                <span class="icon">✨</span>
+            </button>
+        </div>
+    </div>
+</body>
+</html> 
